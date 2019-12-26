@@ -1,0 +1,398 @@
+*{
+    box-sizing: border-box;
+    margin: 2;
+    padding: 2;
+}
+
+body {
+    color: #212121;
+    font: 400 14px/1 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo img {
+    max-width: 10%;
+}
+
+.logo-social img {
+    width: 50px;
+    height: 50px;
+}
+
+.center-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+}
+/* Reset end*/
+/*Default classes start*/
+.d-flex {
+    display: flex;
+}
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: space-center;
+}
+
+.flex-colum {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+/*Default classes end*/
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.standart-section {
+    padding: 80px 0;
+}
+
+
+.section-title {
+    font-weight: 900;
+    margin-bottom: 4%px;
+    font-size: 28px ;
+    margin-top: 4%;
+}
+
+.col-4 {
+    width: 33.3333%;
+    padding: 0 15px;
+}
+
+.row {
+    margin: 0 -15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 60px;
+    font: 400 14px/1 'Roboto', sans-serif;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: #212121;
+    margin-top: 20px;
+    outline: none;
+}
+
+.btn.btn-default {
+    background-color: yellow;
+    border-color: #fdd835;
+    box-shadow: 0 8px 15px rgba(255, 253, 0, 0.5);
+}
+
+.btn.btn-default:hover {
+    background-color: #ffffff;
+}
+
+#header {
+    padding: 20px 0;
+    border-bottom: 2px solid #00a9ba;
+    background-color: #ffffff;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.header-nav {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.header-nav a {
+    text-transform: capitalize;
+}
+
+.header-nav a + a {
+    margin-left: 30px;
+}
+
+a:hover {
+    color: #00a9ba;
+}
+
+#main {
+    padding-top: 87px;
+}
+
+.sneaker-item {
+    background-color: #ffffff;
+    box-shadow: 0 13px 27px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.sneaker-item .sneaker-img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.sneaker-item .sneaker-title {
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.sneaker-price {
+    font-size: 25px;
+    font-weight: 700;
+    color: #00a9ba;
+}
+
+
+.sneaker-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.separate-page ul{
+    margin-top: 5%;
+    margin-right: 10px;
+}
+.separate-page h1{
+    text-align: center;
+    margin-top: 40px;
+}
+strong{
+    font-size: 10px;
+    line-height: 2;
+    font-family: Tahoma, cursive;
+}
+li strong:last-child{
+    font-size: 19px;
+    font-family: "Open Sans",Helvetica,Arial,sans-serif;
+    color: #555;
+    margin-bottom:10%;
+
+}
+
+li{
+    color: slategrey;
+    font-family: Tahoma;
+}
+
+.separate-page img{
+    width: 68%;
+    height: 68%;
+}
+
+.separate-page p{
+    font-size: 45px;
+    margin-top: 8%;
+    color: #00a9ba;
+    font-weight: 500;
+}
+
+
+
+.body-register {
+    font-family: Tahoma;
+    margin: 0;
+}
+
+.h1-register {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #00e9ba;
+    margin-top: 50px;
+}
+
+.form-register {
+    margin: 0 auto;
+    width: 450px;
+}
+
+.group {
+    margin-top: 10px;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.label {
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.input-register {
+    margin-top: 10px;
+    height: 40px;
+    width: 400px;
+    border-radius: 20px/20px ;
+    border: none;
+    padding-left: 15px;
+    font-size: 18px;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.82);
+    outline: none;
+    margin-bottom: 25px;
+}
+/*
+.input-register:focus {
+    border: 2px solid #00e9ba;
+    width: 385px;
+}
+*/
+
+.button-register {
+    padding: 16px 60px;
+    font: 400 14px/1 'Roboto', sans-serif;
+    border-radius: 30px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: #212121;
+    outline: none;
+    margin-top: 30px;
+    margin-right: 40px;
+
+}
+
+.button-register.button-register-default {
+    background-color:#00e9ba;
+    border-color: grey;
+    font-family: Tahoma;
+    font-size: 20px;
+}
+
+.button-register.button-register-default:hover {
+    background-color: #ffffff;
+}
+
+.h1-login {
+    margin: 0;
+    padding-bottom: 5px;
+    border-bottom: 3px solid #00e9ba;
+    margin-top: 150px;
+}
+
+.button-login {
+    display: inline-block;
+    padding: 16px 60px;
+    font: 400 14px/1 'Roboto', sans-serif;
+    border-radius: 50px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    color: #212121;
+    outline: none;
+    margin-top: 30px;
+    margin-right: 40px;
+    /*не использовать для кнопки добавления в корзину
+    margin-bottom: 100px;
+
+    */
+}
+
+.button-login.button-login-default {
+    background-color: #00e9ba;
+    border-color: grey;
+    font-family: Tahoma;
+    font-size: 20px;
+}
+
+.button-login.button-login-default:hover {
+    background-color: #ffffff;
+}
+
+
+
+table {
+    border-spacing: 0 10px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+
+th {
+    padding: 10px 20px;
+    background: none;
+    color: grey;
+    border-right: none;
+    font-size: 15px;
+    width: 36%;
+}
+
+th:first-child {
+    text-align: left;
+}
+
+th:last-child {
+    border-right: none;
+}
+
+td {
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: none;
+}
+
+td:first-child {
+    border-left: 2px solid #56433D;
+    border-right: none;
+}
+
+td:last-child{
+    border-right: 2px solid #56433D;
+}
+
+td:nth-child(2){
+    text-align: left;
+
+}
+
+td img{
+    width: 75px;
+    height: 60px;
+    margin-left: 1%;
+}
+
+.h1-cart{
+    margin-left:16%;
+    margin-top: 7%;
+    border-left-style: solid;
+    border-left-color: #00e9ba;
+    border-left-width: 6px;
+}
+
+td input {
+    background-color: white;
+    font-size: 14px;
+    border: none;
+}
