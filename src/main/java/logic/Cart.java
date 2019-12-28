@@ -28,8 +28,10 @@ public class Cart {
 
     public void load(){
         String sql =
-                "SELECT p.id, p.name, p.description, p.price " +
+                "SELECT p.id, p.name, p.description, pp.url, p.price " +
                         "FROM product p " +
+                        "LEFT JOIN product_photo pp " +
+                        "ON pp.product_id = p.id " +
                         "LEFT JOIN cart_product cp " +
                         "ON cp.product_id = p.id " +
                         "LEFT JOIN cart c " +
@@ -46,6 +48,7 @@ public class Cart {
                 product.setId(resultSet.getInt("id"));
                 product.setName(resultSet.getString("name"));
                 product.setDescription(resultSet.getString("description"));
+                product.setUrl(resultSet.getString("url"));
                 product.setPrice(resultSet.getInt("price"));
                 products.add(product);
             }
@@ -54,7 +57,7 @@ public class Cart {
         }
     }
 
-    public void removeProduct(int product_id){
+    public void removeProduct(String product_name){
         String sql =
                 "DELETE FROM cart_product " +
                         "WHERE ctid IN " +
@@ -62,25 +65,27 @@ public class Cart {
                         "WHERE cart_id = " +
                         "(SELECT id FROM cart WHERE customer_id = " +
                         "(SELECT id FROM customer WHERE name = ?)) " +
-                        "AND product_id = ? limit 1)";
+                        "AND product_id =" +
+                        "(SELECT id FROM product WHERE name = ?) limit 1)";
 
         try(PreparedStatement statement = connectionSetup().prepareStatement(sql)){
             statement.setString(1, customer_name);
-            statement.setInt(2, product_id);
+            statement.setString(2, product_name);
             statement.executeUpdate();
         }catch (SQLException e){
             e.printStackTrace();
         }
     }
 
-    public void addProduct(int product_id){
+    public void addProduct(String product_name){
         String sql =
                 "INSERT INTO cart_product(product_id, cart_id) " +
-                        "VALUES ( ?, " +
+                        "VALUES (" +
+                        "(SELECT id FROM product WHERE name = ?), " +
                         "(SELECT id FROM cart WHERE customer_id = " +
-                        "(SELECT id FROM customer WHERE NAME = ?)))";
+                        "(SELECT id FROM customer WHERE name = ?)))";
         try(PreparedStatement statement = connectionSetup().prepareStatement(sql)){
-            statement.setInt(1, product_id);
+            statement.setString(1, product_name);
             statement.setString(2, customer_name);
             statement.executeUpdate();
         }catch (SQLException e){
@@ -110,4 +115,45 @@ public class Cart {
         }
         return null;
     }
+
+    public String printCart(){
+        StringBuilder builder = new StringBuilder();
+        products = this.getProducts();
+        for (Product product: products) {
+            builder.append("<tr><td><img src=\"/")
+                    .append(product.getUrl())
+                    .append("\"alt=\"")
+                    .append(product.getName())
+                    .append("\"></td>")
+                    .append("<td><a href=\"/sneakers/")
+                    .append(product.getName())
+                    .append(".jsp\">")
+                    .append(product.getDescription())
+                    .append("</a></td>")
+                    .append("<td>")
+                    .append(product.getPrice())
+                    .append("$</td>")
+                    .append("<td><form action=\"jordan\" method=\"post\">")
+                    .append("<input class=\"input-delete\" name=\"delete\" value=\"&times; Удалить\" type=\"submit\">")
+                    .append("<input type=\"hidden\" name=\"name\" value=\"")
+                    .append(product.getName())
+                    .append("\"></form></td></tr>");
+        }
+        return builder.toString();
+    }
+
+    public void removeAll(){
+        String sql = "DELETE " +
+                "FROM cart_product " +
+                "WHERE cart_id = " +
+                "(SELECT id FROM cart WHERE customer_id = " +
+                "(SELECT id FROM customer WHERE name = ?))";
+        try(PreparedStatement statement = connectionSetup().prepareStatement(sql)){
+            statement.setString(1, customer_name);
+            statement.executeUpdate();
+        }catch (SQLException e){
+            e.printStackTrace();
+        }
+    }
+
 }
