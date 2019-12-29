@@ -1,4 +1,4 @@
-<%--
+<%@ page import="logic.Customer" %><%--
   Created by IntelliJ IDEA.
   User: ttre16
   Date: 12/26/19
@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
+
 <header id="header">
   <div class="container d-flex justify-content-between align-items-center">
     <div class="logo">
@@ -23,14 +24,29 @@
 
     </div>
     <nav class="header-nav">
+      <form action="security" method="get">
       <a href="index.jsp">Главная</a>
       <a href="head/us.jsp">О нас</a>
-      <a href="head/login.jsp">Вход</a>
-      <a href="head/registration.jsp">Регистрация</a>
-      <a href="head/cart.jsp">Корзина</a>
+        <a href="head/cart.jsp">Корзина</a>
+
+        <%
+        Customer customer = (Customer) session.getAttribute("customer");
+        if(customer!=null && customer.isLogin()){
+          out.print("<a href=\"index.jsp\">" + ((Customer) session.getAttribute("customer")).getName() + "</a>");
+          out.print("        <button type=\"submit\" name=\"status\" value=\"logOut\">Выход</button>\n");
+        }
+        else {
+          out.print("  <a href=\"head/login.jsp\">Вход</a>\n" +
+                  "      <a href=\"head/registration.jsp\">Регистрация</a>");
+        }
+
+      %>
+      </form>
     </nav>
   </div>
 </header>
+
+
 <main>
   <section class="standart-section sneaker-wrap">
     <div class="container">
@@ -291,6 +307,7 @@
   </section>
   <section class=""></section>
 </main>
-<footer></footer>
+<footer>
+</footer>
 </body>
 </html>
