@@ -11,6 +11,49 @@
         <servlet-name>SecurityServlet</servlet-name>
         <url-pattern>/security</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecurityServlet</servlet-name>
+        <url-pattern>/head/security</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecurityServlet</servlet-name>
+        <url-pattern>/sneakers/security</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecurityServlet</servlet-name>
+        <url-pattern>/clothes/security</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SecurityServlet</servlet-name>
+        <url-pattern>/other/security</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>CustomerCartServlet</servlet-name>
+        <servlet-class>CustomerCartServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CustomerCartServlet</servlet-name>
+        <url-pattern>/sneakers/jordan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerCartServlet</servlet-name>
+        <url-pattern>/head/jordan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerCartServlet</servlet-name>
+        <url-pattern>/clothes/jordan</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CustomerCartServlet</servlet-name>
+        <url-pattern>/other/jordan</url-pattern>
+    </servlet-mapping>
+
+
+
+
 
 
 <!--
