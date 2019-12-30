@@ -24,26 +24,28 @@
         <nav class="header-nav">
             <a href="${pageContext.request.contextPath}/index.jsp">Главная</a>
             <a href="us.jsp">О нас</a>
+            <a href="cart.jsp">Корзина</a>
             <a href="login.jsp">Вход</a>
             <a href="registration.jsp">Регистрация</a>
-            <a href="cart.jsp">Корзина</a>
         </nav>
     </div>
 </header>
 <main id="main">
-    <form action="" class="form-register">
+    <form action="security" method="post" class="form-register">
         <h1 title="Форма для регистрации" class="h1-login text-uppercase">Авторизация</h1>
         <div class="group">
             <label> Имя пользователя:
-                <input type="text" class="input-register">
+                <input type="text" required name="username" class="input-register">
             </label>
         </div>
         <div class="group">
             <label> Пароль:
-                <input type="password" class="input-register">
+                <input type="password" required name="password" class="input-register">
             </label>
         </div>
-        <input class="button-login button-login-default" name="" type="submit" value="Войти">
+        <div style="text-align: center;">
+            <input class="button-register button-register-default" type="submit" value="Войти">
+        </div>
 
     </form>
 </main>
