@@ -1,4 +1,4 @@
-<%--
+<%@ page import="logic.Customer" %><%--
   Created by IntelliJ IDEA.
   User: ttre16
   Date: 12/27/19
@@ -20,13 +20,28 @@
             <a href="${pageContext.request.contextPath}/index.jsp">
                 <img src="${pageContext.request.contextPath}/img/logo.png" alt="logo">
             </a>
+
         </div>
         <nav class="header-nav">
-            <a href="${pageContext.request.contextPath}/index.jsp">Главная</a>
-            <a href="${pageContext.request.contextPath}/head/us.jsp">О нас</a>
-            <a href="${pageContext.request.contextPath}/head/login.jsp">Вход</a>
-            <a href="${pageContext.request.contextPath}/head/registration.jsp">Регистрация</a>
-            <a href="${pageContext.request.contextPath}/head/cart.jsp">Корзина</a>
+            <form action="security" method="get">
+                <a href="${pageContext.request.contextPath}/index.jsp">Главная</a>
+                <a href="${pageContext.request.contextPath}/head/us.jsp">О нас</a>
+                <a href="${pageContext.request.contextPath}/head/cart.jsp">Корзина</a>
+
+                <%
+                    Customer customer = (Customer) session.getAttribute("customer");
+
+                    if(customer!=null && customer.isLogin()){
+                        out.print("<a href=\"/index.jsp\">" + ((Customer) session.getAttribute("customer")).getName() + "</a>");
+                        out.print("        <button type=\"submit\" name=\"status\" value=\"logOut\">Выход</button>\n");
+                    }
+                    else {
+                        out.print("  <a href=\"/head/login.jsp\">Вход</a>\n" +
+                                "      <a href=\"/head/registration.jsp\">Регистрация</a>");
+                    }
+
+                %>
+            </form>
         </nav>
     </div>
 </header>
