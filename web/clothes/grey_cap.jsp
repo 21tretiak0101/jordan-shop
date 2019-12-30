@@ -72,6 +72,7 @@
                 </li>
             </ul>
             <form action="jordan" method="post">
+                <% session.setAttribute("add", true);%>
                 <input type="hidden" name="name" value="grey_cap">
                 <input type="submit" class="button-login button-login-default" value="Добавить в корзину">
             </form>
