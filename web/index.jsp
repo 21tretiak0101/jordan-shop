@@ -147,10 +147,10 @@
               <img src="img/grey_hoodie.png" alt="grey_hoodie">
             </a>
             <h6 class="sneaker-title">
-              <a href="clothes/grey_hoodie.jsp">grey hoodie</a>
+              <a href="clothes/grey_hoodie.jsp">JORDAN Hoodie</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>50$</span>
+              <span>60$</span>
             </div>
           </div>
         </div>
@@ -160,10 +160,10 @@
               <img src="img/t-shirt.png" alt="t-shirt">
             </a>
             <h6 class="sneaker-title">
-              <a href="clothes/t-shirt.jsp">t-shirt</a>
+              <a href="clothes/t-shirt.jsp">JORDAN T-Shirt</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>50$</span>
+              <span>35$</span>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@
               <img src="img/shorts.png" alt="shorts">
             </a>
             <h6 class="sneaker-title">
-              <a href="clothes/shorts.jsp">shorts</a>
+              <a href="clothes/shorts.jsp">JORDAN Shorts</a>
             </h6>
             <div class="sneaker-price text-right">
               <span>50$</span>
@@ -186,10 +186,10 @@
               <img src="img/t-shirt91.png" alt="t-shirt91">
             </a>
             <h6 class="sneaker-title">
-              <a href="clothes/t-shirt91.jsp">t-shirt91</a>
+              <a href="clothes/t-shirt91.jsp">JORDAN T-Shirt 91</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>50$</span>
+              <span>35$</span>
             </div>
           </div>
         </div>
@@ -199,10 +199,10 @@
               <img src="img/grey_cap.png" alt="grey_cap">
             </a>
             <h6 class="sneaker-title">
-              <a href="clothes/grey_cap.jsp">grey cap</a>
+              <a href="clothes/grey_cap.jsp">JORDAN Grey Hat</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>50$</span>
+              <span>32$</span>
             </div>
           </div>
         </div>
@@ -212,7 +212,7 @@
               <img src="img/black_cap.png" alt="black_cap">
             </a>
             <h6 class="sneaker-title">
-              <a href="clothes/black_cap.jsp">black cap</a>
+              <a href="clothes/black_cap.jsp">JORDAN Black Hat</a>
             </h6>
             <div class="sneaker-price text-right">
               <span>50$</span>
@@ -229,11 +229,11 @@
             <a href="other/black_bag.jsp" class="sneaker-img text-center">
               <img src="img/black_bag.png" alt="black_bag">
             </a>
-            <h6 class="sneaker-title text-uppercase">
-              <a href="other/black_bag.jsp">black bag</a>
+            <h6 class="sneaker-title">
+              <a href="other/black_bag.jsp">JORDAN Bag</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>60$</span>
+              <span>75$</span>
             </div>
           </div>
         </div>
@@ -243,10 +243,10 @@
               <img src="img/ball.png" alt="ball">
             </a>
             <h6 class="sneaker-title">
-              <a href="other/ball.jsp">ball</a>
+              <a href="other/ball.jsp">JORDAN Ball</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>60$</span>
+              <span>50$</span>
             </div>
           </div>
         </div>
@@ -256,10 +256,10 @@
               <img src="img/white_socks.png" alt="white_socks">
             </a>
             <h6 class="sneaker-title">
-              <a href="other/white_socks.jsp">white socks</a>
+              <a href="other/white_socks.jsp">JORDAN White Socks</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>60$</span>
+              <span>20$</span>
             </div>
           </div>
         </div>
@@ -269,10 +269,10 @@
               <img src="img/red_headband.png" alt="red_headband">
             </a>
             <h6 class="sneaker-title">
-              <a href="other/red_headband.jsp">red headband</a>
+              <a href="other/red_headband.jsp">JORDAN Red Headband</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>60$</span>
+              <span>10$</span>
             </div>
           </div>
         </div>
@@ -282,10 +282,10 @@
               <img src="img/black_headband.png" alt="black_headband">
             </a>
             <h6 class="sneaker-title">
-              <a href="other/black_headband.jsp">black headband</a>
+              <a href="other/black_headband.jsp">JORDAN Black Headband</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>60$</span>
+              <span>10$</span>
             </div>
           </div>
         </div>
@@ -295,10 +295,10 @@
               <img src="img/black_socks.png" alt="black-socks">
             </a>
             <h6 class="sneaker-title">
-              <a href="other/black_socks.jsp">black socks</a>
+              <a href="other/black_socks.jsp">JORDAN Black Socks</a>
             </h6>
             <div class="sneaker-price text-right">
-              <span>60$</span>
+              <span>22$</span>
             </div>
           </div>
         </div>
