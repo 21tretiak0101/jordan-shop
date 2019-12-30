@@ -47,7 +47,7 @@
 </header>
 <main id="main">
     <div class="clothes-page">
-        <h1>Jordan Jumpman Classics 91</h1>
+        <h1>Jordan Jumpman Classics T-Shirt 91</h1>
         <div id="left">
             <img src="${pageContext.request.contextPath}/img/t-shirt91.png" alt="t-shirt91">
         </div>
