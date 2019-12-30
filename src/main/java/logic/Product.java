@@ -58,4 +58,9 @@ public class Product {
                 ", url='" + url + '\'' +
                 '}';
     }
+
+    public String getProductSection(){
+        return this.id > 3 && this.id < 10 ? "sneakers":
+                this.id >= 10 && this.id < 16 ? "clothes" : "other";
+    }
 }
