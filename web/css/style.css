@@ -7,6 +7,7 @@
 body {
     color: #212121;
     font: 400 14px/1 'Roboto', sans-serif;
+    max-block-size: 90%;
 }
 
 a {
@@ -135,12 +136,16 @@ ul {
     font-weight: 700;
 }
 
-.header-nav a {
-    text-transform: capitalize;
-}
-
 .header-nav a + a {
     margin-left: 30px;
+}
+
+.header-nav button{
+    margin-left: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border: none;
+    background-color: white;
 }
 
 a:hover {
@@ -205,12 +210,12 @@ li strong:last-child{
 
 li{
     color: slategrey;
-    font-family: Tahoma;
+    font-family: Tahoma, serif;
 }
 
 .separate-page img{
-    width: 68%;
-    height: 68%;
+    width: 65%;
+    height: 65%;
 }
 
 .separate-page p{
@@ -220,18 +225,58 @@ li{
     font-weight: 500;
 }
 
+.clothes-page img{
+    width: 90%;
+    height: 90%;
+    margin-left: 1%;
+    margin-top: 20%;
+}
+
+.clothes-page p{
+    font-size: 45px;
+    margin-top: 8%;
+    color: #00a9ba;
+    font-weight: 500;
+    margin-left: 7%;
+}
+
+
+#left {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 2%;
+}
+
+#right {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width:40%;
+    margin-top: 16%;
+}
+
+#right input{
+    margin-left: 5%;
+}
+
+.clothes-page h1{
+    text-align: center;
+}
+
 
 
 .body-register {
-    font-family: Tahoma;
+    font-family: Tahoma, serif;
     margin: 0;
 }
 
 .h1-register {
-    margin: 0;
     padding-bottom: 5px;
     border-bottom: 3px solid #00e9ba;
-    margin-top: 50px;
+    margin: 50px 0 0;
 }
 
 .form-register {
@@ -285,7 +330,7 @@ li{
 .button-register.button-register-default {
     background-color:#00e9ba;
     border-color: grey;
-    font-family: Tahoma;
+    font-family: Tahoma, serif;
     font-size: 20px;
 }
 
@@ -294,10 +339,9 @@ li{
 }
 
 .h1-login {
-    margin: 0;
     padding-bottom: 5px;
     border-bottom: 3px solid #00e9ba;
-    margin-top: 150px;
+    margin: 150px 0 0;
 }
 
 .button-login {
@@ -320,20 +364,21 @@ li{
 .button-login.button-login-default {
     background-color: #00e9ba;
     border-color: grey;
-    font-family: Tahoma;
+    font-family: Tahoma, serif;
     font-size: 20px;
+    text-align: center;
 }
 
 .button-login.button-login-default:hover {
     background-color: #ffffff;
+    margin-left:40px ;
 }
 
-
-
-table {
+ #main table {
     border-spacing: 0 10px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
+    max-width: 80%;
 }
 
 th {
@@ -374,7 +419,6 @@ td:last-child{
 
 td:nth-child(2){
     text-align: left;
-
 }
 
 td img{
@@ -384,7 +428,6 @@ td img{
 }
 
 .h1-cart{
-    margin-left:16%;
     margin-top: 7%;
     border-left-style: solid;
     border-left-color: #00e9ba;
@@ -396,3 +439,41 @@ td input {
     font-size: 14px;
     border: none;
 }
+
+caption{
+    text-align: left;
+}
+
+.text1{
+    font-family: Arial, serif;
+    font-size: 45px;
+    color:#2d2d2d;
+    margin:0;
+    padding-top: 200px;
+    padding-bottom: 25px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.text2{
+    font-family: Tahoma, serif;
+    font-size: 22px;
+    color:#8b8b8b;
+    margin:0;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.contacts{
+    text-align: center;
+    margin-top: 40px;
+    font-family: cursive;
+}
+
+.contacts img{
+    height: 2%;
+    width: 2%;
+}
+
+
