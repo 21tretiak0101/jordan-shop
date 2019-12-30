@@ -9,6 +9,11 @@ public class Customer {
     private String email;
     private String phone;
     private Cart cart;
+    private boolean isLogin;
+
+    public Customer() {
+        this.isLogin = false;
+    }
 
     public String getName() {
         return name;
@@ -36,6 +41,18 @@ public class Customer {
 
     public void setCart(Cart cart) {
         this.cart = cart;
+    }
+
+    public Cart getCart() {
+        return cart;
+    }
+
+    public boolean isLogin() {
+        return isLogin;
+    }
+
+    public void setLogin(boolean login) {
+        isLogin = login;
     }
 
     @Override
