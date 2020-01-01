@@ -1,4 +1,4 @@
-<%@ page import="logic.Customer" %>
+<%@ page import="com.ttre16.jordan.logic.Customer" %>
 <%--
   Created by IntelliJ IDEA.
   User: ttre16
@@ -15,38 +15,31 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/style.css">
 </head>
 <body>
-
 <header id="header">
     <div class="container d-flex justify-content-between align-items-center">
         <div class="logo">
             <a href="${pageContext.request.contextPath}/index.jsp">
                 <img src="${pageContext.request.contextPath}/img/logo.png" alt="logo">
             </a>
-
         </div>
         <nav class="header-nav">
             <form action="security" method="get">
                 <a href="${pageContext.request.contextPath}/index.jsp">Главная</a>
-                <a href="us.jsp">О нас</a>
-                <a href="cart.jsp">Корзина</a>
-
+                <a href="${pageContext.request.contextPath}/head/us.jsp">О нас</a>
+                <a href="${pageContext.request.contextPath}/head/cart.jsp">Корзина</a>
                 <%
                     Customer customer = (Customer) session.getAttribute("customer");
-                    if(customer!=null && customer.isLogin()){
-                        out.print("<a href=\"/index.jsp\">" + ((Customer) session.getAttribute("customer")).getName() + "</a>");
-                        out.print("        <button type=\"submit\" name=\"status\" value=\"logOut\">Выход</button>\n");
-                    }
-                    else {
-                        out.print("  <a href=\"login.jsp\">Вход</a>\n" +
-                                "      <a href=\"registration.jsp\">Регистрация</a>");
-                    }
-
+                    if(customer!=null && customer.isLogin())
+                        out.print("<a href=\"/index.jsp\">" + customer.getName() + "</a>\n" +
+                                "<button type=\"submit\" name=\"status\" value=\"logOut\">Выход</button>");
+                    else
+                        out.print("<a href=\"/head/login.jsp\">Вход</a>\n" +
+                                "<a href=\"/head/registration.jsp\">Регистрация</a>");
                 %>
             </form>
         </nav>
     </div>
 </header>
-
 <main id="main">
     <div>
         <p class="text1">О компании</p>
@@ -71,7 +64,8 @@
                      alt="twitter">
             </a>
             <a href="https://www.instagram.com/nike/" target="_blank">
-                <img src="${pageContext.request.contextPath}/img/instagram.png" alt="instagram">
+                <img src="${pageContext.request.contextPath}/img/instagram.png"
+                     alt="instagram">
             </a>
             <a href="https://www.youtube.com/user/nike" target="_blank">
                 <img src="${pageContext.request.contextPath}/img/youtube.png"

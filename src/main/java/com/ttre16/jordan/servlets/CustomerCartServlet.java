@@ -19,7 +19,6 @@ public class CustomerCartServlet extends HttpServlet {
         response.setContentType("text/html");
         Customer customer = (Customer) session.getAttribute("customer");
         if(customer!=null && customer.isLogin()) {
-
             if (request.getParameter("name").equals("removeAll"))
                 customer.getCart().removeAll();
             else {

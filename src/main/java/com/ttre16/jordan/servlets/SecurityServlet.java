@@ -25,7 +25,6 @@ public class SecurityServlet extends javax.servlet.http.HttpServlet {
         }
         else
             response.sendRedirect("/head/login.jsp");
-
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {

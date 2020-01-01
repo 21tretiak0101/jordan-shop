@@ -46,7 +46,6 @@
         <div style="text-align: center;">
             <input class="button-register button-register-default" type="submit" value="Войти">
         </div>
-
     </form>
 </main>
 <footer id="footer"></footer>
