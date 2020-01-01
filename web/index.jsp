@@ -1,4 +1,4 @@
-<%@ page import="logic.Customer" %><%--
+<%@ page import="com.ttre16.jordan.logic.Customer" %><%--
   Created by IntelliJ IDEA.
   User: ttre16
   Date: 12/26/19
