@@ -1,4 +1,4 @@
-package logic;
+package com.ttre16.jordan.logic;
 
 import java.sql.*;
 
@@ -67,7 +67,6 @@ public class Customer {
                 '}';
     }
 
-    //установка соединения
     private Connection connectionSetup() throws SQLException {
         String url = "jdbc:postgresql://localhost:5432/shop";
         String user = "postgres";
@@ -75,7 +74,6 @@ public class Customer {
         return DriverManager.getConnection(url, user, password);
     }
 
-    //вход в личный кабинет
     private String checkUser() {
         String sql = "SELECT * FROM customer WHERE name = '%s'";
         sql = String.format(sql, this.name);
@@ -90,7 +88,6 @@ public class Customer {
         return check ? "log1" : "log0";
     }
 
-    //регистрация
     private String createUser() {
         if (!uniqueName(this.name)) return "insert0";
         String sql = "INSERT INTO customer (name, password, email, phone) VALUES (?, ?, ?, ?)";
@@ -107,7 +104,6 @@ public class Customer {
         return "insert1";
     }
 
-    //проверка уникальности имени
     private boolean uniqueName(String name) {
         boolean unique = true;
         String sql = "SELECT name FROM customer WHERE name = '%s'";
@@ -120,7 +116,6 @@ public class Customer {
         return !unique;
     }
 
-    //получение данных формы входа/регистрации
     public String come() {
         if (this.email == null) return this.checkUser();
         return this.createUser();

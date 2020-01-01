@@ -1,4 +1,4 @@
-package logic;
+package com.ttre16.jordan.logic;
 
 import java.sql.*;
 import java.util.ArrayList;

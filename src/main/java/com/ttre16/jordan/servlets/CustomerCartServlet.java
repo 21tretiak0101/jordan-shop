@@ -1,5 +1,7 @@
-import logic.Cart;
-import logic.Customer;
+package com.ttre16.jordan.servlets;
+
+import com.ttre16.jordan.logic.Cart;
+import com.ttre16.jordan.logic.Customer;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -10,7 +12,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 
-@WebServlet("jordan")
+@WebServlet("/jordan")
 public class CustomerCartServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

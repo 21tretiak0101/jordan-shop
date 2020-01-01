@@ -1,4 +1,4 @@
-package logic;
+package com.ttre16.jordan.logic;
 
 public class Product {
     private int id;
