@@ -1,4 +1,4 @@
-<%@ page import="logic.Customer" %><%--
+<%@ page import="com.ttre16.jordan.logic.Customer" %><%--
   Created by IntelliJ IDEA.
   User: ttre16
   Date: 12/27/19
@@ -20,26 +20,20 @@
             <a href="${pageContext.request.contextPath}/index.jsp">
                 <img src="${pageContext.request.contextPath}/img/logo.png" alt="logo">
             </a>
-
         </div>
         <nav class="header-nav">
             <form action="security" method="get">
                 <a href="${pageContext.request.contextPath}/index.jsp">Главная</a>
                 <a href="${pageContext.request.contextPath}/head/us.jsp">О нас</a>
                 <a href="${pageContext.request.contextPath}/head/cart.jsp">Корзина</a>
-
                 <%
                     Customer customer = (Customer) session.getAttribute("customer");
-
-                    if(customer!=null && customer.isLogin()){
-                        out.print("<a href=\"/index.jsp\">" + ((Customer) session.getAttribute("customer")).getName() + "</a>");
-                        out.print("        <button type=\"submit\" name=\"status\" value=\"logOut\">Выход</button>\n");
-                    }
-                    else {
-                        out.print("  <a href=\"/head/login.jsp\">Вход</a>\n" +
-                                "      <a href=\"/head/registration.jsp\">Регистрация</a>");
-                    }
-
+                    if(customer!=null && customer.isLogin())
+                        out.print("<a href=\"/index.jsp\">" + customer.getName() + "</a>\n" +
+                                "<button type=\"submit\" name=\"status\" value=\"logOut\">Выход</button>");
+                    else
+                        out.print("<a href=\"/head/login.jsp\">Вход</a>\n" +
+                                "<a href=\"/head/registration.jsp\">Регистрация</a>");
                 %>
             </form>
         </nav>
@@ -77,7 +71,6 @@
         <input type="hidden" name="name" value="jordan5">
         <input type="submit" class="button-register button-register-default" value="Добавить в корзину">
     </form>
-
 </main>
 <footer id="footer"></footer>
 </body>
